@@ -58,6 +58,7 @@ while True:
 
             roi = frame[ymin:ymax, xmin:xmax]
             roi_gray = cv2.cvtColor(roi, cv2.COLOR_BGR2GRAY)
+            cv2.imshow("ROI for Prediction", roi_gray)
 
             if cooldown_counter == 0:
                 try:

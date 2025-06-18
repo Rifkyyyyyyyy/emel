@@ -1,4 +1,9 @@
-env/
+venv/
 app/__pycache__
-data/
-models/
+outputs/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pyw
+*.pyz

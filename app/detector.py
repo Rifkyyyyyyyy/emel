@@ -26,6 +26,10 @@ class GestureDetector:
         preds = self.model.predict(img, verbose=0)[0]
         idx = np.argmax(preds)
         confidence = preds[idx]
+        
+        # --- TAMBAH BARIS INI UNTUK DEBUGGING ---
+        print(f"All predictions: {preds}")
+        print(f"Predicted index: {idx}, Label: {self.label_map.get(str(idx), '')}, Confidence: {confidence:.4f}")
 
         if confidence < self.threshold:
             return None
